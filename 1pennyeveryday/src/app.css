@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+@plugin "@tailwindcss/forms";
+@plugin '@tailwindcss/typography';
+
+@theme {
+    /* Colours */
+    --color-*: initial;
+    --color-white: #ffffff;
+    --color-blue-900: #151a28;
+		--color-blue-800: #28324D;
+		--color-blue-500: #4672F0;
+    
+    /* Fonts */
+    --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  h1, .h1 {
+    font-size: var(--text-5xl);
+    line-height: var(--text-5xl--line-height);
+  }
+
+  h2, .h2 {
+    font-size: var(--text-3xl);
+    line-height: var(--text-3xl--line-height);
+  }
+
+  h3, .h3 {
+    font-size: var(--text-2xl);
+    line-height: var(--text-2xl--line-height);
+  }
+
+  h4, .h4 {
+    font-size: var(--text-xl);
+    line-height: var(--text-xl--line-height);
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    border-radius: var(--radius-md);
+    background-color: var(--color-blue-800);
+    border-color: var(--color-blue-800);
+  }
+
+  input[type="text"]:focus,
+  input[type="number"]:focus {
+    border-color: var(--color-blue-500);
+  }
+}
+
+@layer component {
+  select {
+    border-radius: var(--radius-md);
+    background-color: var(--color-blue-800);
+    border-color: var(--color-blue-800);
+  }
+
+  select::focus {
+    outline: var(--outline-2);
+  }
+
+  button {
+    padding-inline: 20px;
+    padding-block: 12px;
+    background-color: var(--color-blue-500);
+    border-radius: var(--radius-md);
+  }
+}
