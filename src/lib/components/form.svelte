@@ -35,13 +35,13 @@
 
 </script>
 
-<div class="mx-auto flex flex-col gap-10 justify-center mt-20 mb-30">
-	<div class="flex items-center gap-4">
+<div class="mx-auto flex flex-col gap-10 justify-center mt-20 mb-12 xl:mb-30">
+	<div class="flex flex-wrap items-center gap-4">
 		<label for="currentDay" class="sr-only">Current day</label>
 		<input name="currentDay" type="text" bind:value={challengeDay} placeholder="Current day of your challenge">
 		<div class="text-sm">Enter the current day of your challenge, so if you're paying £1.23 today, that means you're on day 123.</div>
 	</div>
-	<div class="flex items-center gap-4">
+	<div class="flex flex-wrap items-center gap-4">
 		<label for="month" class="sr-only">Month</label>
 		<select name="month" bind:value={selectedMonth}>
 			{#each months as month}

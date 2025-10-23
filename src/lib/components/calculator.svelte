@@ -22,6 +22,6 @@
 </script>
 
 {#if challengeDay > 0 }
-  <p>You need <strong>{total}</strong> for the challenge during the month of {month}.</p>
+  <p class="text-lg"><strong class="text-blue-500">{total}</strong> will be taken for the challenge during the month of {month}.</p>
 {/if}
 
