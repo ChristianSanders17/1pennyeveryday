@@ -55,7 +55,7 @@
     border-color: var(--color-blue-800);
   }
 
-  select::focus {
+  select:focus {
     outline: var(--outline-2);
   }
 
