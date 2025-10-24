@@ -1,7 +1,7 @@
 <script>
 	import Calculator from './calculator.svelte';
 	
-	let challengeDay = $state(0);
+	let challengeDay = $state();
 	let showTotal = $state(false);
 	const months = ([
 			{days: 31, name: 'January', id: 0},
@@ -39,7 +39,7 @@
 	<div class="flex flex-wrap items-center gap-4">
 		<label for="currentDay" class="sr-only">Current day</label>
 		<input name="currentDay" type="number" min="1" max="365" size="20" bind:value={challengeDay} placeholder="Current day of your challenge">
-		<div class="text-sm">Enter the current day of your challenge, so if you're paying £1.23 today, that means you're on day 123.</div>
+		<div class="text-sm">If you're paying £1.23 today, that means you're on day 123.</div>
 	</div>
 	<div class="flex flex-wrap items-center gap-4">
 		<label for="month" class="sr-only">Month</label>
