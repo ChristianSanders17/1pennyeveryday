@@ -38,7 +38,7 @@
 <div class="mx-auto flex flex-col gap-10 justify-center mt-20 mb-12 xl:mb-30">
 	<div class="flex flex-wrap items-center gap-4">
 		<label for="currentDay" class="sr-only">Current day</label>
-		<input name="currentDay" type="text" bind:value={challengeDay} placeholder="Current day of your challenge">
+		<input name="currentDay" type="number" min="1" max="365" size="20" bind:value={challengeDay} placeholder="Current day of your challenge">
 		<div class="text-sm">Enter the current day of your challenge, so if you're paying £1.23 today, that means you're on day 123.</div>
 	</div>
 	<div class="flex flex-wrap items-center gap-4">
