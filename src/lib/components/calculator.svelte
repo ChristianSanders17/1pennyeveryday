@@ -4,7 +4,7 @@
   const calculate = (calculateTotal = false) => {
     let pennies = challengeDay;
     let pounds = 0;
-    let totalPennies = 0;
+    let totalPennies = 1;
 
     if (calculateTotal) {
       for (let day = 1; day < Number(challengeDay); day++) {
