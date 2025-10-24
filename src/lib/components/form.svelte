@@ -2,7 +2,7 @@
 	import Calculator from './calculator.svelte';
 	
 	let challengeDay = $state(0);
-	let total = $state(0);
+	let showTotal = $state(false);
 	const months = ([
 			{days: 31, name: 'January', id: 0},
 			{days: 28, name: 'February', id: 1},
@@ -35,7 +35,7 @@
 
 </script>
 
-<div class="mx-auto flex flex-col gap-10 justify-center mt-20 mb-12 xl:mb-30">
+<div class="mx-auto flex flex-col gap-10 justify-center mt-20 mb-5">
 	<div class="flex flex-wrap items-center gap-4">
 		<label for="currentDay" class="sr-only">Current day</label>
 		<input name="currentDay" type="number" min="1" max="365" size="20" bind:value={challengeDay} placeholder="Current day of your challenge">
@@ -50,9 +50,14 @@
 		</select>
 		<div class="text-sm">The month you want to calculate for (assumes the start of the month).</div>
 	</div>
-
-	<Calculator challengeDay={challengeDay} monthDays={selectedMonthData.days} month={selectedMonthData.name} total={total} />
+	<div class="flex flex-wrap items-center gap-4">
+		<input type="checkbox" id="totalAccumulated" name="totalAccumulated" bind:checked={showTotal}>
+		<label for="totalAccumulated" class="text-sm">Tick to show your total savings to date.</label>
+	</div>
 </div>
+
+<Calculator challengeDay={challengeDay} monthDays={selectedMonthData.days} month={selectedMonthData.name} showTotal={showTotal} />
+
 <div>
 	<button class="cursor-pointer block" onclick={resetCalculator}>Reset</button>
 </div>
