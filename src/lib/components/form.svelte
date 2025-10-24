@@ -35,7 +35,7 @@
 
 </script>
 
-<div class="mx-auto flex flex-col gap-10 justify-center mt-20 mb-5">
+<div class="mx-auto flex flex-col gap-10 justify-center mb-10">
 	<div class="flex flex-wrap items-center gap-4">
 		<label for="currentDay" class="sr-only">Current day</label>
 		<input name="currentDay" type="number" min="1" max="365" size="20" bind:value={challengeDay} placeholder="Current day of your challenge">
@@ -52,7 +52,7 @@
 	</div>
 	<div class="flex flex-wrap items-center gap-4">
 		<input type="checkbox" id="totalAccumulated" name="totalAccumulated" bind:checked={showTotal}>
-		<label for="totalAccumulated" class="text-sm">Tick to show your total savings to date.</label>
+		<label for="totalAccumulated" class="text-sm">Tick to show your total savings to date (day {challengeDay}).</label>
 	</div>
 </div>
 

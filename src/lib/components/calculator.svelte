@@ -33,7 +33,7 @@
 </script>
 
 {#if challengeDay > 0 }
-  <div class="my-10">
+  <div class="my-10 bg-blue-800 py-3 px-5">
     <p class="text-lg"><strong class="text-blue-500">{total}</strong> will be taken for the challenge during the month of {month}.</p>
 
     {#if showTotal}
