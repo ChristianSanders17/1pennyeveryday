@@ -71,7 +71,8 @@
   button {
     padding-inline: 20px;
     padding-block: 12px;
-    background-color: var(--color-blue-500);
+    background-color: var(--color-white);
+    color: var(--color-blue-800);
     border-radius: var(--radius-md);
   }
 }

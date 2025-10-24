@@ -38,12 +38,12 @@
 <div class="mx-auto flex flex-col gap-10 justify-center mb-10">
 	<div class="flex flex-wrap items-center gap-4">
 		<label for="currentDay" class="sr-only">Current day</label>
-		<input name="currentDay" type="number" min="1" max="365" size="20" bind:value={challengeDay} placeholder="Current day of your challenge">
+		<input name="currentDay" type="number" min="1" max="365" size="20" bind:value={challengeDay} placeholder="Current day of your challenge" class="max-w-[250px] w-full">
 		<div class="text-sm">If you're paying £1.23 today, that means you're on day 123.</div>
 	</div>
 	<div class="flex flex-wrap items-center gap-4">
 		<label for="month" class="sr-only">Month</label>
-		<select name="month" bind:value={selectedMonth}>
+		<select id="month" name="month" bind:value={selectedMonth}>
 			{#each months as month}
 				<option value={month.id}>{month.name}</option>
 			{/each}
@@ -52,7 +52,7 @@
 	</div>
 	<div class="flex flex-wrap items-center gap-4">
 		<input type="checkbox" id="totalAccumulated" name="totalAccumulated" bind:checked={showTotal}>
-		<label for="totalAccumulated" class="text-sm">Tick to show your total savings to date (day {challengeDay}).</label>
+		<label for="totalAccumulated" class="text-sm">Tick to show your total savings to date (day {challengeDay ? challengeDay : 1}).</label>
 	</div>
 </div>
 

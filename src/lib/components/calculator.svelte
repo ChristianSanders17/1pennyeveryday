@@ -37,7 +37,7 @@
     <p class="text-lg"><strong class="text-blue-500">{total}</strong> will be taken for the challenge during the month of {month}.</p>
 
     {#if showTotal}
-      <p class="mt-5 text-lg inline-block">You've saved a total of <strong class="text-blue-500">{totalAccumulated}</strong> so far! (minus any interest earnt)</p>
+      <p class="mt-5 text-lg inline-block">You've saved a total of <strong class="text-blue-500">{totalAccumulated}</strong> so far!</p>
     {/if}
   </div>
 {/if}
